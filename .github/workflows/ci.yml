@@ -2,9 +2,9 @@ name: Run Tests PortalsCodingChallenge
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main", "development"]
   pull_request:
+    branches: ["main"]
 
 jobs:
   build-and-test:
