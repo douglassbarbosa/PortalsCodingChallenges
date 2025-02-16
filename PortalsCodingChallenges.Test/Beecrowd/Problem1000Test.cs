@@ -10,16 +10,16 @@ namespace PortalsCodingChallenges.Test.Beecrowd
     [TestMethod]
     public void Test_HelloWorld_Output()
     {
-      // Captura a saída do console
+      // get Console.Out reference
       using var output = new StringWriter();
       Console.SetOut(output);
 
-      // Executa o problema
+      // run the problem
       var problem = new Problem1000();
       problem.Run();
 
-      // Verifica a saída esperada
-      Assert.AreEqual("Hello World!\n", output.ToString());
+      // assert the output
+      Assert.AreEqual($"Hello World!{Environment.NewLine}", output.ToString());
     }
   }
 }
